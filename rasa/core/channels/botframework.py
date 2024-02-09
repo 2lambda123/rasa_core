@@ -51,7 +51,7 @@ class BotFramework(OutputChannel):
                        'grant_type': grant_type,
                        'scope': scope}
 
-            token_response = requests.post(uri, data=payload)
+            token_response = requests.post(uri, data=payload, timeout=60)
 
             if token_response.ok:
                 token_data = token_response.json()
@@ -93,7 +93,7 @@ class BotFramework(OutputChannel):
         headers = await self._get_headers()
         send_response = requests.post(post_message_uri,
                                       headers=headers,
-                                      data=json.dumps(data))
+                                      data=json.dumps(data), timeout=60)
 
         if not send_response.ok:
             logger.error("Error trying to send botframework messge. "
