@@ -9,7 +9,7 @@ typing==3.6.6
 ruamel.yaml==0.15.85
 tensorflow==2.11.1
 apscheduler==3.5.3
-tqdm==4.29.1
+tqdm==4.66.3
 networkx==2.2
 fbmessenger==5.3.2
 pykwalify==1.7.0
